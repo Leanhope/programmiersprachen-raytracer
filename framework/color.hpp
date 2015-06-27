@@ -54,6 +54,18 @@ struct Color
     tmp -= b;
     return tmp;
   }
+
+  friend bool operator==(Color const& one, Color const& other)
+  {
+    if(one.r == other.r && one.g == other.g && one.b == other.b)
+    {
+      return true;
+    }
+    else
+    {
+      return false;
+    }
+  }
 };
 
 #endif //#define BUW_COLOR_HPP

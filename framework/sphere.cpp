@@ -3,20 +3,18 @@
 Sphere::Sphere():
 
 	center_{glm::vec3{0.0,0.0,0.0}}, radius_{0.0}
-	{}
+	{std::cout << "construct Sphere" << std::endl;}
 
 Sphere::Sphere(glm::vec3 cent, double rad):
-
 	center_{cent}, radius_{rad}
-	{}
+	{std::cout << "construct Sphere" << std::endl;}
 
 Sphere::Sphere(glm::vec3 cent, double rad, std::string n, Color col):
-
 	center_{cent}, radius_{rad}, Shape(n, col)
-	{}
+	{std::cout << "construct Sphere" << std::endl;}
 
 Sphere::~Sphere()
-{}
+{std::cout << "destruct Sphere" << std::endl;}
 
 double Sphere::area() const
 {

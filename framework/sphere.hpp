@@ -13,7 +13,7 @@ class Sphere : public Shape
 	Sphere();
 	Sphere(glm::vec3, double);
 	Sphere(glm::vec3, double, std::string, Color);
-	~Sphere();
+	~Sphere() override;
 
 	std::ostream& print(std::ostream& os) const override; 
 

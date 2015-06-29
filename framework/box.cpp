@@ -3,20 +3,20 @@
 Box::Box():
 
 	minimum_{glm::vec3{0.0,0.0,0.0}}, maximum_{glm::vec3{0.0,0.0,0.0}}
-	{}
+	{std::cout << "construct Box" << std::endl;}
 
 Box::Box(glm::vec3 min, glm::vec3 max):
 
 	minimum_{min}, maximum_{max}
-	{}
+	{std::cout << "construct Box" << std::endl;}
 
 Box::Box(glm::vec3 min, glm::vec3 max, std::string n, Color col):
 
 	minimum_{min}, maximum_{max}, Shape(n, col)
-	{}
+	{std::cout << "construct Box" << std::endl;}
 
 Box::~Box()
-{}
+{std::cout << "destruct Box" << std::endl;}
 
 double Box::area() const
 {

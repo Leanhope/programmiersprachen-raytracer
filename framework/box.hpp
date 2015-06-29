@@ -12,7 +12,7 @@ public:
 	Box();
 	Box(glm::vec3, glm::vec3);
 	Box(glm::vec3, glm::vec3, std::string, Color);
-	~Box();
+	~Box() override;
 
 	double area() const override;
 	double volume() const override;

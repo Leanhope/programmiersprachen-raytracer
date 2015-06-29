@@ -2,14 +2,14 @@
 
 Shape::Shape():
 	name_{}, color_{0.0f,0.0f,0.0f}
-	{}
+	{std::cout << "construct Shape" << std::endl;}
 
 Shape::Shape(std::string n, Color col):
 	name_{n}, color_{col}
-	{}
+	{std::cout << "construct Shape" << std::endl;}
 
 Shape::~Shape()
-{}
+{std::cout << "destruct Shape" << std::endl;}
 
 Color Shape::color() const
 {

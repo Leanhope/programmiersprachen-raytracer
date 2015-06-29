@@ -18,6 +18,7 @@ public:
 	double volume() const override;
 	glm::vec3 min() const;
 	glm::vec3 max() const;
+	std::ostream& print(std::ostream& os) const override; 
 
 private:
 

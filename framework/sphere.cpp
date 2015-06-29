@@ -37,3 +37,20 @@ double Sphere::radius() const
 {
 	return radius_;
 }
+
+std::ostream& Sphere::print(std::ostream& os) const
+{
+	Shape::print(os);
+    os << "[Type: Sphere][Radius: "  << radius_ << "][Center: " 
+			    	 << center_.x << ","
+			    	 << center_.y << ","
+			    	 << center_.z << "]" << std::endl;	
+	return os;
+
+}
+
+bool Sphere::intersect(Ray const& r, float& distance) const
+{
+	return glm::intersectRaySphere(
+	r.origin, glm::normalize(r.direction), center_, radius_, distance);
+}
